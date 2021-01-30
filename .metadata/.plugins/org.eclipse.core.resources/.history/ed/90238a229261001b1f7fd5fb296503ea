@@ -1,0 +1,12 @@
+package springIntro;
+
+public class CustomerManager {
+	
+	public void add() {
+		//iþ koþullarý saðlandýysa:
+		CustomerDal customerDal = new CustomerDal();
+		customerDal.add();
+		
+	}
+
+}

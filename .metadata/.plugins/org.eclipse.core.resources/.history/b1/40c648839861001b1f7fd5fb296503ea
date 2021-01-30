@@ -1,0 +1,13 @@
+package springIntro;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		CustomerManager customerManager = new CustomerManager(new CustomerDal());
+		customerManager.add();
+		CustomerManager customerManager2 = new CustomerManager(new MySqlCustomerDal());
+		customerManager2.add();
+	}
+
+}

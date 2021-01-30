@@ -1,0 +1,23 @@
+package springIntro;
+
+public class CustomerDal implements ICustomerDal{
+	
+	String connectionString;
+	
+	public String getConnectionString() {
+		return connectionString;
+	}
+
+	public void setConnectionString(String connectionString) {
+		this.connectionString = connectionString;
+	}
+
+	@Override
+	public void add() {
+		//veritabaný iþlemleri
+		System.out.println("ConnectionString: " + connectionString);
+		System.out.println("Oracle veri tabanýna eklendi.");
+		
+	}
+
+}
