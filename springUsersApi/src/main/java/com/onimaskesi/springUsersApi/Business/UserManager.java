@@ -1,7 +1,5 @@
 package com.onimaskesi.springUsersApi.Business;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,19 +19,6 @@ public class UserManager implements IUserService {
 
 	@Override
 	@Transactional
-	public List<User> getAll() {
-		return userDal.getAll();
-	}
-
-	@Override
-	@Transactional
-	public void add(User user) {
-
-		userDal.add(user);
-	}
-
-	@Override
-	@Transactional
 	public void update(User user) {
 
 		userDal.update(user);
@@ -46,6 +31,20 @@ public class UserManager implements IUserService {
 
 		userDal.delete(user);
 
+	}
+
+	@Override
+	public User login(String email, String password) {
+
+		User user = userDal.login(email, password);
+
+		return user;
+	}
+
+	@Override
+	public String signup(User user) {
+
+		return userDal.signup(user);
 	}
 
 }
